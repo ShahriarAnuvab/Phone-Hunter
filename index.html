@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="poppins">
+    <header class="container mx-auto bg-[#0D6EFD0D] rounded-md">
+        <div class="flex justify-between mt-5 mx-2 p-5">
+            <h1 class="text-[#403F3F] text-2xl font-bold">Hot Gadget</h1>
+            <button class="btn bg-[#0D6EFD] text-white rounded-lg">Sign Up</button>
+        </div>
+        <div class="grid justify-items-center space-y-4 p-5">
+            <h1 class="text-[#100F0F] text-3xl md:text-5xl lg:text-6xl font-semibold">Apple Iphone 13 Pro Max</h1>
+            <p class="text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal text-center">There are many variations of
+                passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by
+                injected humou.</p>
+            <button class="btn bg-[#0D6EFD] text-white rounded-lg ">Buy Now</button>
+        </div>
+        <div class="flex  flex-col lg:flex-row justify-center items-center">
+            <img src="./images/pngwing2.png" alt="">
+            <img src="./images/pngwing1.png" alt="">
+            <img src="./images/pngwing2.png" alt="">
+        </div>
+    </header>
+    <main class="container mx-auto">
+        <section>
+            <div class="grid justify-items-center my-5">
+                <h1 class="text-center text-[#100F0F] text-3xl md:text-4xl font-semibold my-2">Search Your Phone</h1>
+                <div class="flex gap-1">
+                    <div>
+                        <input type="text" placeholder="Search your phone"
+                            class=" bg-[#100F0F0D] outline-none focus:bg-none input w-11/12 " />
+                        <i class="fa-solid fa-magnifying-glass fa-lg  absolute mt-6 -ml-8" style="color: #d1d1d1;"></i>
+                    </div>
+                    <button class="btn bg-[#0D6EFD] text-white rounded-lg ">Search</button>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="cardContainer" class="grid md:grid-cols-2 lg:grid-cols-3 p-5 gap-5 justify-items-center">
+                <!-- <div class="card bg-base-100 shadow-xl h-[350px] lg:max-w-[350px] xl:max-w-[320px] bg-base-100 xl:gap-4">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-[#100F0F] text-3xl md:text-4xl font-semibold my-2">Shoes!</h2>
+                      <p class="text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn bg-[#0D6EFD] text-white rounded-lg ">Show Details</button>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+            </div>
+        </section>
+    </main>
+    <footer class="container mx-auto bg-[#0D6EFD0D] mt-5 mb-5 pb-5">
+        <div class="mt-5 flex flex-col md:flex-row justify-around items-center p-5 ">
+            <div class="my-5 space-y-3">
+                <h1 class="text-[#100F0F] text-3xl md:text-4xl lg:text-5xl font-semibold">Hot Gadgets</h1>
+                <p class="text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">You can definitely work</p>
+            </div>
+            <div>
+                <div class="flex gap-5 justify-center items-center">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                    <button class="btn bg-[#0D6EFD] text-white rounded-lg ">Join Premium</button>
+                </div>
+            </div>
+        </div>
+        <hr class="w-3/4  flex mx-auto justify-center ">
+        <div class="grid grid-cols-2 gap-10 md:grid-cols-4 justify-items-center justify-center my-5 ">
+            <div class="flex flex-col space-y-4">
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Product</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Browse jobs</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Browse jobs</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Startup jobs</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Company jobs</a>  
+            </div>
+            <div class="flex flex-col space-y-4">
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Popular</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">UIUX Design</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Product Design</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Back-End Developer</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Front-End Developer</a>  
+            </div>
+            <div class="flex flex-col space-y-4">
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Resource</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Faq</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Support</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Privacy Policy</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Terms of Service</a>  
+            </div>
+            <div class="flex flex-col space-y-4">
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Company</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">About Us</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Contact Us</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Careers Tips</a>
+                <a class="link link-hover text-[#706F6F] text-xs md:text-sm lg:text-lg font-normal">Careers</a>  
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
