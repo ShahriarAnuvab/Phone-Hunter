@@ -1,26 +1,32 @@
-const loadData = async (searchText) => {
+const loadData = async (searchText, isShowAll) => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/phones?search=${searchText}`
   );
   const data = await res.json();
   const phones = data.data;
   // console.log(phones)
-  displayPhones(phones);
+  displayPhones(phones, isShowAll);
 };
 // loadData();
-const displayPhones = (phones) => {
+const displayPhones = (phones, isShowAll) => {
   const cardContainer = document.getElementById("cardContainer");
-  cardContainer.textContent = '';
+  cardContainer.textContent = "";
   // console.log(phones.length);
   // phones = phones.slice(0, 12);
-  const showAllContainer = document.getElementById('showAllContainer');
-  if(phones.length > 12){
-    showAllContainer.classList.remove('hidden');
+  const showAllContainer = document.getElementById("showAllContainer");
+  if (phones.length > 12 && !isShowAll) {
+    showAllContainer.classList.remove("hidden");
+  } else {
+    showAllContainer.classList.add("hidden");
+  }
+  if(!isShowAll){
+    phones =  phones.slice(0, 12);
   }
   else{
-    showAllContainer.classList.add('hidden');
+
   }
-  phones.slice(0, 12).forEach((phone) => {
+  // console.log("isShowAll", isShowAll);
+  phones.forEach((phone) => {
     // console.log(phone)
     const div = document.createElement("div");
     div.innerHTML = `
@@ -42,21 +48,24 @@ const displayPhones = (phones) => {
   toggleHandler(false);
 };
 
-const handleSearch = () =>{
+// isShowAll is for show all the phones
+const handleSearch = (isShowAll) => {
   toggleHandler(true);
-    const searchBox = document.getElementById('searchBox');
-    const searchText = searchBox.value;
-    searchBox.value = '';
-    loadData(searchText);
-    // console.log(searchText);
-}
+  const searchBox = document.getElementById("searchBox");
+  const searchText = searchBox.value;
+  // searchBox.value = "";
+  loadData(searchText, isShowAll);
+  // console.log(searchText);
+};
 
-const toggleHandler = (isLoading) =>{
-  const toggleContainer = document.getElementById('toggleContainer');
-  if(isLoading){
-    toggleContainer.classList.remove('hidden');
+const toggleHandler = (isLoading) => {
+  const toggleContainer = document.getElementById("toggleContainer");
+  if (isLoading) {
+    toggleContainer.classList.remove("hidden");
+  } else {
+    toggleContainer.classList.add("hidden");
   }
-  else{
-    toggleContainer.classList.add('hidden');
-  }
-}
+};
+const showAll = () => {
+  handleSearch(true);
+};
